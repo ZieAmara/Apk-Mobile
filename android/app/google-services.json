@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "904902775686",
+    "project_id": "fonctionnalites-firebase-1f864",
+    "storage_bucket": "fonctionnalites-firebase-1f864.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904902775686:android:4c9943d30be2a0820f5207",
+        "android_client_info": {
+          "package_name": "com.example.fonctionnalites"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904902775686-bads6jd8u6np7buivlrba5ri73ejbv2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-yHZv-YhRtQtZgDsxVhh66PtRO2g8vXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904902775686-bads6jd8u6np7buivlrba5ri73ejbv2p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "904902775686-t7dpr5goegvh4p0sckusl5tsrnlo7jlf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fonctionnalites"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
