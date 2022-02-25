@@ -10,7 +10,7 @@ Widget timeCard({required String time, required String header}) =>
         Text(
           header,
           style: const TextStyle(
-            fontSize: 10,
+            fontSize: 20,
             color: Color(0xFFFFFFFF),
             fontWeight: FontWeight.bold,
           ),
@@ -21,11 +21,7 @@ Widget timeCard({required String time, required String header}) =>
           decoration: bordureCirculaire,
           child: Text(
             time,
-            style: const TextStyle(
-              fontSize: 15,
-              color: Color(0xFF000000),
-              fontWeight: FontWeight.bold,
-            ),
+            style: timeStile,
           ),
         ),
       ],
