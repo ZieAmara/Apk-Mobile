@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:fonctionnalites/Minuterie/widgets/time_card_widget.dart';
+
+import '../widgets/time_card_widget.dart';
 
 class TimePlus extends StatefulWidget{
   const TimePlus({Key? key}) : super(key: key);
@@ -55,9 +56,9 @@ class _TimePlusState extends State<TimePlus> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          timeCard(time: minutes, header: "MINUTES"),
-          const SizedBox(width: 8,),
-          timeCard(time: seconds, header: "SECONDS"),
+          timeCard(time: minutes, header: "min"),
+          const SizedBox(width: 4,),
+          timeCard(time: seconds, header: "sec"),
         ],
       ),
     );

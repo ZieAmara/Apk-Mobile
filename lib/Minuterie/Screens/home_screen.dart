@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fonctionnalites/Minuterie/Screens/chrono.dart';
-import 'package:fonctionnalites/theme.dart';
+
+import 'chrono.dart';
+import '../theme_minuterie.dart';
 
 class Home extends StatelessWidget{
   const Home({Key? key}) : super(key: key);

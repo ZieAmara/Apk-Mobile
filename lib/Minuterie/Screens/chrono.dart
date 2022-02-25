@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fonctionnalites/Minuterie/Models/time_plus.dart';
+
+import '../Models/time_plus.dart';
 
 class Chrono extends StatelessWidget{
   const Chrono({Key? key}) : super(key: key);
