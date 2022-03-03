@@ -9,7 +9,7 @@ class Chrono extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return const Center(
-      child: TimePlus(),
+      child: TimePlus(compteArebout: 6,decrement: false,),
     );
   }
   

@@ -6,18 +6,22 @@ import '../widgets/buttons_widget.dart';
 import '../widgets/time_card_widget.dart';
 
 class TimePlus extends StatefulWidget{
-  const TimePlus({Key? key}) : super(key: key);
+  final int compteArebout;
+  final bool decrement;
+
+  const TimePlus({
+    Key? key,
+    this.compteArebout = 90,
+    this.decrement = false,
+  }) : super(key: key);
 
   @override
   State<TimePlus> createState() => _TimePlusState();
 }
 
 class _TimePlusState extends State<TimePlus> {
-  static const countDownTemps = Duration(minutes: 10);
   Duration temps = const Duration();
   Timer? timer;
-
-  bool isCountdown = false;
 
   @override
   void initState() {
@@ -27,7 +31,8 @@ class _TimePlusState extends State<TimePlus> {
   }
 
   void reset() {
-    if (isCountdown) {
+    Duration countDownTemps = Duration(minutes: widget.compteArebout);
+    if (widget.decrement) {
       setState(() => temps = countDownTemps);
     }
     else {
@@ -36,12 +41,15 @@ class _TimePlusState extends State<TimePlus> {
   }
 
   void addTime() {
-    final addSeconds = isCountdown ? -1 : 1;
+    final addSeconds = widget.decrement ? -1 : 15;
     setState(() {
       final seconds = temps.inSeconds + addSeconds;
       if (seconds < 0) {
         timer?.cancel();
-      } else {
+      }else {
+        if (addSeconds == 15 && temps.inMinutes == widget.compteArebout-1){
+          stopTime(resets: true);
+        }
         temps = Duration(seconds: seconds);
       }
     });
@@ -60,7 +68,7 @@ class _TimePlusState extends State<TimePlus> {
   @override
   Widget build(BuildContext context) {
     String twoDigits(int n) => n.toString().padLeft(2, '0');
-    final minutes = twoDigits(temps.inMinutes.remainder(90));
+    final minutes = twoDigits(temps.inMinutes.remainder(widget.compteArebout));
     final seconds = twoDigits(temps.inSeconds.remainder(60));
 
     return Center(
